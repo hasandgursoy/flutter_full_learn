@@ -6,6 +6,7 @@ import 'package:flutter_full_learn/101/app_bar.dart';
 import 'package:flutter_full_learn/101/button_learn.dart';
 import 'package:flutter_full_learn/101/color_learn.dart';
 import 'package:flutter_full_learn/101/column_row_learn.dart';
+import 'package:flutter_full_learn/101/list_view_learn.dart';
 import 'package:flutter_full_learn/101/page_view.dart';
 import 'package:flutter_full_learn/101/stack_learn.dart';
 import 'package:flutter_full_learn/101/statefull_learn.dart';
@@ -13,6 +14,7 @@ import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
 import 'package:flutter_full_learn/101/icon_learn.dart';
 import 'package:flutter_full_learn/demos/color_demos.dart';
+import 'package:flutter_full_learn/demos/color_life_cycle.dart';
 import 'package:flutter_full_learn/demos/note_demos_view.dart';
 import '101/card_learn.dart';
 import '101/custom_widget_learn.dart';
@@ -52,7 +54,7 @@ class MyApp extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      home:  const ColorDemos(),
+      home:  const ListViewLearn(),
     );
   }
 }
