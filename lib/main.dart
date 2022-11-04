@@ -5,17 +5,23 @@ import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/202/service/service_learn.dart';
 
 import '101/color_learn.dart';
+import '202/animated_lear.dart';
+import '202/cache/shared_learn_cache.dart';
+import '202/form_learn_view.dart';
+import '202/image_learn_202.dart';
 import '202/model_view.dart';
+import '202/oop_lear_view.dart';
 import '202/package_learn.dart';
 import '202/service/comments_view.dart';
 import '202/service/service_learn_post.dart';
+import '202/state_manage/state_learn_view.dart';
 import '202/theme/light_theme.dart';
 import '202/theme_learn_view.dart';
 import '202/widget_size_learn.dart';
 
 void main() {
   runApp(const MyApp());
-}
+} 
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -45,7 +51,7 @@ class MyApp extends StatelessWidget {
       //     color: Colors.white,
       //   ),
       // ),
-      home: const ThemeLearnView(),
+      home: const SharedLearnView(),
     );
   }
 }
