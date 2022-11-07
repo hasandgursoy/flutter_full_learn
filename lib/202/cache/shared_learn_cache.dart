@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/cache/shared_manager.dart';
+import 'package:flutter_full_learn/202/cache/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedLearnView extends StatefulWidget {
@@ -113,10 +114,10 @@ class _ListViewUserCacheWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         return Card(
             child: ListTile(
-          title: Text(users[index].name),
-          subtitle: Text(users[index].surname),
+          title: Text(users[index].name ?? ""),
+          subtitle: Text(users[index].surname ?? ""),
           trailing: Text(
-            users[index].url,
+            users[index].url ?? "",
             style: Theme.of(context)
                 .textTheme
                 .subtitle1
@@ -136,5 +137,16 @@ abstract class SharedLoading<T extends StatefulWidget>
     setState(() {
       isLoading = !isLoading;
     });
+  }
+}
+
+class UserItems {
+  late final List<User> users;
+  UserItems() {
+    users = [
+      User('vb', '10', 'vb10.dev'),
+      User('vb2', '102', 'vb10.dev'),
+      User('vb3', '103', 'vb10.dev'),
+    ];
   }
 }
