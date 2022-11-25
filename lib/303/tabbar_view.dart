@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/101/icon_learn.dart';
+import 'package:flutter_full_learn/303/feed_view.dart';
 
-class TabLearnView extends StatefulWidget {
-  const TabLearnView({super.key});
+class TabbarAdvance extends StatefulWidget  {
+  const TabbarAdvance({super.key});
 
   @override
-  State<TabLearnView> createState() => _TabLearnViewState();
+  State<TabbarAdvance> createState() => _TabLearnViewState();
+  
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
 // TickerProviderStateMixin TabController'ı sayfada kullanmamızı sağlıyor.
-class _TabLearnViewState extends State<TabLearnView>
-    with TickerProviderStateMixin {
+class _TabLearnViewState extends State<TabbarAdvance>
+    with TickerProviderStateMixin{
   late final TabController _tabController;
   final double _notchMargin = 2;
 
@@ -54,9 +58,8 @@ class _TabLearnViewState extends State<TabLearnView>
                       .map((e) => Tab(text: e.name))
                       .toList())),
           appBar: AppBar(
-            bottom: _myTabBar(),
           ),
-          body: _TabBarView(tabController: _tabController),
+          body: _tabBarView(),
         ));
   }
 
@@ -69,9 +72,21 @@ class _TabLearnViewState extends State<TabLearnView>
                 ))
             .toList());
   }
+
+  TabBarView _tabBarView() {
+    return TabBarView(
+      physics: const NeverScrollableScrollPhysics(),
+      controller: _tabController,
+      children: [
+      FeedView(),
+      IconLearnView(),
+      IconLearnView(),
+      IconLearnView()
+    ]);
+  }
 }
 
-class _TabBarView extends StatelessWidget {
+class _TabBarView extends StatelessWidget{
   const _TabBarView({
     Key? key,
     required TabController tabController,

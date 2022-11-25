@@ -1,9 +1,6 @@
-import 'dart:io';
 
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_full_learn/202/model_learn.dart';
 import 'package:flutter_full_learn/202/service/post_service.dart';
 import 'package:flutter_full_learn/202/service/service_model.dart';
 
@@ -19,9 +16,9 @@ class _ServiceLearnState extends State<ServicePostLearn> {
   bool _isLoading = false;
   late final IPostService _postService;
 
-  TextEditingController _titleController = TextEditingController();
-  TextEditingController _bodyController = TextEditingController();
-  TextEditingController _userIdController = TextEditingController();
+  final TextEditingController _titleController = TextEditingController();
+  final TextEditingController _bodyController = TextEditingController();
+  final TextEditingController _userIdController = TextEditingController();
 
   @override
   void initState() {
@@ -59,13 +56,13 @@ class _ServiceLearnState extends State<ServicePostLearn> {
           children: [
             TextField(
               controller: _titleController,
-              decoration: InputDecoration(labelText: 'Title'),
+              decoration: const InputDecoration(labelText: 'Title'),
             ),
             TextField(
               // Sonra ki satıra geç dedik.
               textInputAction: TextInputAction.next,
               controller: _bodyController,
-              decoration: InputDecoration(labelText: 'Body'),
+              decoration: const InputDecoration(labelText: 'Body'),
             ),
             TextField(
               controller: _userIdController,
@@ -79,8 +76,8 @@ class _ServiceLearnState extends State<ServicePostLearn> {
                 })
               ],
               // Auto tamamlarken yapılması gereken tamamlamalar için aşşağıya yapılar ekleyebiliyoruz.
-              autofillHints: [AutofillHints.creditCardName],
-              decoration: InputDecoration(labelText: 'UserId'),
+              autofillHints: const [AutofillHints.creditCardName],
+              decoration: const InputDecoration(labelText: 'UserId'),
             ),
             TextButton(
               // _isLoading best Practice
@@ -97,7 +94,7 @@ class _ServiceLearnState extends State<ServicePostLearn> {
                         var deger = _addItemToService(model);
                       }
                     },
-              child: Text("Kontrol Et"),
+              child: const Text("Kontrol Et"),
             )
           ],
         ),

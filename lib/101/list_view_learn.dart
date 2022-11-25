@@ -88,7 +88,7 @@ class _ListViewLearnState extends State<ListViewLearn> {
 }
 
 class _ListDemoState extends StatefulWidget {
-  const _ListDemoState({super.key});
+  const _ListDemoState();
 
   @override
   State<_ListDemoState> createState() => __ListDemoStateState();

@@ -19,9 +19,9 @@ class ListTileLEarn extends StatelessWidget {
               title: const RandomImageComponent(height: 100),
               //dense: true, komponent'i oldukça sıkıştırmaya yarıyor.
               onTap: () {},
-              subtitle: Text('How do you use your card ? '),
-              leading: Icon(Icons.money),
-              trailing: Icon(Icons.chevron_right),
+              subtitle: const Text('How do you use your card ? '),
+              leading: const Icon(Icons.money),
+              trailing: const Icon(Icons.chevron_right),
             ),
           )
         ],

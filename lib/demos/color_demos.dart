@@ -2,7 +2,6 @@
 // Bu ekranda 3 button ve bunlara basınca renk değişimi olacak
 // Secili olan button selected icon olsun
 
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
