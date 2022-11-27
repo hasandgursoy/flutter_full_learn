@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/303/reqres-resource/view/req_res_view.dart';
+import 'package:flutter_full_learn/product/global/resource_context.dart';
+import 'package:flutter_full_learn/product/global/theme_notifier.dart';
+import 'package:provider/provider.dart';
 import '202/alert_learn.dart';
 import '202/theme/light_theme.dart';
 import '303/call_back_lear.dart';
@@ -7,10 +10,21 @@ import '303/feed_view.dart';
 import '303/tabbar_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        Provider(create: (_) => ResourceContext()),
+        ChangeNotifierProvider<ThemeNotifier>(
+            create: (context) => ThemeNotifier())
+      ],
+      builder: (context, child) {
+        return const MyApp();
+      },
+    ),
+  );
 }
 
- class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
@@ -19,7 +33,7 @@ void main() {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       // Genel olarak projenin ayarlarını yapmak istiyorsak burdan yapıyoruz.
-      theme: LightTheme().theme,
+      theme: context.watch<ThemeNotifier>().currentTheme,
       //  ThemeData.dark().copyWith(
       //   // Benim projemde Appbarlar Ortada olacak bir rule mesela bu .
       //   // AppBar da kod tekrarından kaçınmış oluyoruz her yeni sayfada aynı şeyleri yazmak zorunda kalmıyoruz.
