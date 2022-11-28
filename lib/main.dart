@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/303/reqres-resource/view/req_res_view.dart';
+import 'package:flutter_full_learn/303/lottie_learn.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifier.dart';
 import 'package:provider/provider.dart';
-import '202/alert_learn.dart';
-import '202/theme/light_theme.dart';
-import '303/call_back_lear.dart';
-import '303/feed_view.dart';
-import '303/tabbar_view.dart';
+
 
 void main() {
   runApp(
@@ -52,7 +48,7 @@ class MyApp extends StatelessWidget {
       //     color: Colors.white,
       //   ),
       // ),
-      home: const ReqResView(),
+      home: const LottieLearnView(),
     );
   }
 }

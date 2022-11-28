@@ -40,6 +40,7 @@ dependencies:
 
   # Animation
   flutter_spinkit: ^5.1.0
+  lottie: ^2.0.0
 
   # Core Packages Flutter Bu Paket Aynı Zaman Channel tarafından geldiği için Native ConfigLeri eklemek gerek.
   # Google Packages
@@ -83,7 +84,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/download.png
-    - assets/
+    - assets/lottie/light_dark.json 
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

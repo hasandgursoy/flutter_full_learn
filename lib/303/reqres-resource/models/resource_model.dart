@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'resource_model.g.dart';
 
-@JsonSerializable()
+@JsonSerializable()  
 class ResourceModel {
   List<Data>? data;
 
