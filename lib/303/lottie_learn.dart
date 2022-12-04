@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_full_learn/product/constant/lottie_class.dart';
 import 'package:flutter_full_learn/product/global/theme_notifier.dart';
 import 'package:lottie/lottie.dart';
