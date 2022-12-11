@@ -1,5 +1,4 @@
 
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/service/comments_view.dart';
 import 'package:flutter_full_learn/202/service/post_service.dart';

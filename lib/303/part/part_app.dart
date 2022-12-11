@@ -2,9 +2,7 @@ part of './part_of_learn.dart';
 
 
 class _PartOfBar extends StatelessWidget with PreferredSizeWidget {
-  const _PartOfBar({
-    super.key,
-  });
+  const _PartOfBar();
 
   @override
   Widget build(BuildContext context) {

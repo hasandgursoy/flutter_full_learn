@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/product/constant/lottie_class.dart';
 import 'package:flutter_full_learn/product/global/theme_notifier.dart';
+import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
@@ -23,6 +24,17 @@ class _LottieLearnViewState extends State<LottieLearnView>
     controller = AnimationController(
         vsync: this, duration: DuraitonItems.durationNoraml());
     super.initState();
+    navigateToHome(context);
+  }
+
+  // Bu konu 303 konusu pushNamed bunu sonradan ekledim lottie vs kullandığımız için
+  // bir splash screen görevi görsün diye
+  Future<void> navigateToHome(BuildContext context) async {
+    await Future.delayed(const Duration(seconds: 3));
+    Navigator.of(this.context).pushNamed(NavigateRoutes.home.withParaf);
+    // En başta bir kere açılırken splash screen gördükden sonra bir daha geri dönülmeyecek ise pushReplacementNamed kullanılabilir.
+    // Navigator.of(this.context)
+    //     .pushReplacementNamed(NavigateRoutes.detail.withParaf);
   }
 
   @override

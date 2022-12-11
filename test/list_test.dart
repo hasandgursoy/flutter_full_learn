@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:collection/collection.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/303/generic_learn.dart';
 import 'package:flutter_full_learn/product/widget/high_card.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -1,10 +1,7 @@
 // Test klasorüne faydası olması için açıldı
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-import '../../303/generic_learn.dart';
 
 class HighCard extends StatelessWidget {
   const HighCard({super.key, required this.items});

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/101/listview_builder.dart';
 import 'package:flutter_full_learn/202/service/post_service.dart';
 
 import '../202/service/service_model.dart';
@@ -37,7 +36,7 @@ class _FeedViewState extends State<FeedView>
           // switch yazdıktan sonra snapshot.connectionState parantez içine verip alt kısmını silersek otomatik olarak yapar gerisini.
           switch (snapshot.connectionState) {
             case ConnectionState.none:
-              return Placeholder();
+              return const Placeholder();
             case ConnectionState.waiting:
             case ConnectionState.active:
               return const Center(child: CircularProgressIndicator());

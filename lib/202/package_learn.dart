@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/package/launch_manager.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-import 'package/loading_bar.dart';
 
 // Normalde aşşağıdaki yapıya mixin verirdik yada class'ı ama LaunchMixin'i sınırlandırdık sadece statefullwidget için kullanılabilir hale getirdik.
 class PackageLearnView extends StatefulWidget {

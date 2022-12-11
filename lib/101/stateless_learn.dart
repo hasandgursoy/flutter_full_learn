@@ -18,7 +18,7 @@ class StatelessLearnView extends StatelessWidget {
     );
   }
 
-  SizedBox _emptyBox() => SizedBox(height: 10,);
+  SizedBox _emptyBox() => const SizedBox(height: 10,);
 }
 
 // _ işareti dart dilinde private yapıda olduğunu söyler.

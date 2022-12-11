@@ -78,7 +78,7 @@ class _TabLearnViewState extends State<TabbarAdvance>
       physics: const NeverScrollableScrollPhysics(),
       controller: _tabController,
       children: [
-      FeedView(),
+      const FeedView(),
       IconLearnView(),
       IconLearnView(),
       IconLearnView()

@@ -1,11 +1,8 @@
-import 'dart:developer';
 
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/image_learn_202.dart';
 import 'package:flutter_full_learn/303/reqres-resource/service/reqres-service.dart';
 import 'package:flutter_full_learn/303/reqres-resource/viewmodel/req_res_provider.dart';
-import 'package:flutter_full_learn/303/reqres-resource/viewmodel/req_res_view_model.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifier.dart';
 import 'package:provider/provider.dart';

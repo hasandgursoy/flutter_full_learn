@@ -21,7 +21,7 @@ class _AlertLearnViewState extends State<AlertLearnView> {
             barrierDismissible: false,
             context: context,
             builder: (context) {
-              return _ImageZoomDialog();
+              return const _ImageZoomDialog();
             },
           );
           inspect(result);
@@ -74,7 +74,7 @@ class UpdateDialog extends AlertDialog {
 }
 
 class _ImageZoomDialog extends StatelessWidget {
-  const _ImageZoomDialog({super.key});
+  const _ImageZoomDialog();
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +96,7 @@ class _ImageZoomDialog extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context, "selam Hasan");
                 },
-                icon: Icon(Icons.close)))
+                icon: const Icon(Icons.close)))
       ]),
     );
   }

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/101/Scaffold_learn.dart';
+import 'package:flutter_full_learn/303/feed_view.dart';
 import 'package:flutter_full_learn/303/lottie_learn.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifier.dart';
+import 'package:flutter_full_learn/product/navigator/navigator_custom.dart';
+import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
 import 'package:provider/provider.dart';
-
 
 void main() {
   runApp(
@@ -20,7 +23,7 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget with NavigatorCustom {
   const MyApp({super.key});
 
   @override
@@ -48,7 +51,24 @@ class MyApp extends StatelessWidget {
       //     color: Colors.white,
       //   ),
       // ),
-      home: const LottieLearnView(),
+
+      // Tanımlandığı Class'a bak güzel bir bakış açısı
+      // onUnknownRoute: (settings) {
+      //   return MaterialPageRoute(
+      //     builder: (context) {
+      //       return const ScaffoldLearnView();
+      //     },
+      //   );
+      // },
+      // routes: NavigatorRoutes().items,
+
+      // Route's kullanıcaksak home veremiyoruz. '/' işareti bize homu getircek hemen yukarıda
+      // home: const PackageLearnView(),
+
+      onGenerateRoute: (settings) {
+        // Yukarıda mixin olarak bunun ekledim şuan o yüzden func'ını direk çağırabiliyorum.
+        return onGenerateRoute(settings);
+      },
     );
   }
 }

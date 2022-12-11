@@ -138,7 +138,7 @@ mixin ProductSheetMixin {
 
 // 2. Adım
 class _CustomMainSheet extends StatelessWidget {
-  const _CustomMainSheet({super.key, required this.child});
+  const _CustomMainSheet({required this.child});
   final Widget child;
 
   @override

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/cache/user_cache_manager.dart';
-import 'shared_learn_cache.dart';
 import 'shared_manager.dart';
 
 import 'user_model.dart';

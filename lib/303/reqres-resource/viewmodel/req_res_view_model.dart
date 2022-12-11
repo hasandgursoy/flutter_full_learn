@@ -1,6 +1,4 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_full_learn/202/cache/shared_learn_cache.dart';
 import 'package:flutter_full_learn/303/reqres-resource/models/resource_model.dart';
 import 'package:flutter_full_learn/303/reqres-resource/service/reqres-service.dart';
 import 'package:flutter_full_learn/product/dio_service/dio_service.dart';
