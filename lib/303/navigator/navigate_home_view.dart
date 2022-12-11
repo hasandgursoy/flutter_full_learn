@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/product/navigator/navigator_managment.dart';
 import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
 
 class NavigateHomeView extends StatefulWidget {
@@ -15,9 +16,11 @@ class _NavigateHomeViewState extends State<NavigateHomeView> {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.fork_right_sharp),
         onPressed: () {
-          Navigator.of(context).pushNamed(NavigateRoutes.detail.withParaf,
-          // arguments: diğer sayfaya göndermek istediğimiz verileri okuyabildiğimiz bir yer :D
-              arguments: {'HomeData' : "Home Verisi"});
+          NavigatorManager.instance
+              .pushToPage(NavigateRoutes.detail, arguments: "MarcusAurelius");
+          // Navigator.of(context).pushNamed(NavigateRoutes.detail.withParaf,
+          //     // arguments: diğer sayfaya göndermek istediğimiz verileri okuyabildiğimiz bir yer :D
+          //     arguments: {'HomeData': "Home Verisi"});
         },
       ),
       appBar: AppBar(

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/101/Scaffold_learn.dart';
-import 'package:flutter_full_learn/303/feed_view.dart';
-import 'package:flutter_full_learn/303/lottie_learn.dart';
+import 'package:flutter_full_learn/303/mobx_image_picker/view/mobx_image_upload.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifier.dart';
 import 'package:flutter_full_learn/product/navigator/navigator_custom.dart';
-import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
+import 'package:flutter_full_learn/product/navigator/navigator_managment.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -69,6 +67,12 @@ class MyApp extends StatelessWidget with NavigatorCustom {
         // Yukarıda mixin olarak bunun ekledim şuan o yüzden func'ını direk çağırabiliyorum.
         return onGenerateRoute(settings);
       },
+
+      // Bu da farklı bir yöntem
+      navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
+
+      // Mobx için home yapısını açıyorum :D diğerleri çalışmayacak o yüzden.
+      home: const MobxImageUpload(),
     );
   }
 }
