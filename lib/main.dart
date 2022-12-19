@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/303/mobx_image_picker/view/mobx_image_upload.dart';
+import 'package:flutter_full_learn/303/packages/kartal/kartal_view.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifier.dart';
 import 'package:flutter_full_learn/product/navigator/navigator_custom.dart';
 import 'package:flutter_full_learn/product/navigator/navigator_managment.dart';
 import 'package:provider/provider.dart';
+
+import '303/testable/image_picker_generic.dart';
 
 void main() {
   runApp(
@@ -72,7 +74,7 @@ class MyApp extends StatelessWidget with NavigatorCustom {
       navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
 
       // Mobx için home yapısını açıyorum :D diğerleri çalışmayacak o yüzden.
-      home: const MobxImageUpload(),
+      home: const KartalView(),
     );
   }
 }

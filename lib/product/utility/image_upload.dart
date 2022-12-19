@@ -9,4 +9,11 @@ class ImageUploadManager {
 
     return image;
   }
+
+  Future<XFile?> fetchFromCamera() async {
+    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+
+    return image;
+  }
+
 }
